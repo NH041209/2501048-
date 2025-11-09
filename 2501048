@@ -1,0 +1,67 @@
+# 과제 25
+
+keys = input().split()
+values = input().split()
+
+values_int = [int(v) for v in values]
+
+result_dict = dict(zip(keys, values_int))
+
+if 'alpha' in result_dict:
+    del result_dict['alpha']
+
+if 'delta' in result_dict:
+    del result_dict['delta']
+
+print(result_dict)
+
+# 26
+park = { 'korean': 94, 'english': 91, 'mathematics': 89, 'science': 83}
+
+print(park['english'])
+print(park['science'])
+
+# 27
+
+kim = { 'korean': 94, 'english': 91, 'mathematics': 89, 'science': 83}
+
+for key in kim:
+    kim[key] = 100
+
+print(kim)
+
+# 28
+
+lee = { 'korean': 94, 'english': 91, 'mathematics': 89, 'science': 83}
+
+if 'english' in lee:
+    del lee['english']
+
+print(lee)
+
+# 29
+
+lim = { 'korean': 94, 'english': 91, 'mathematics': 89, 'science': 83}
+
+for key, value in lim.items():
+    print(key, value)
+
+# 30
+
+choi = { 'korean': 94, 'english': 91, 'mathematics': 89, 'science': 83}
+
+high_scores_dict = {key: value for key, value in choi.items() if value >= 90}
+
+for key in high_scores_dict.keys():
+    print(key, end=' ')
+
+# 31
+
+yoo = { 'korean': 94, 'english': 91, 'mathematics': 89, 'science': 83}
+
+scores = yoo.values()
+total_score = sum(scores)
+count = len(yoo)
+
+average = total_score / count
+print(average)
